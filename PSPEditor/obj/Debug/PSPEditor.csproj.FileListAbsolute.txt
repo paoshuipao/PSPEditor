@@ -1,0 +1,6 @@
+F:\MyNewDll\PSPEditor.dll
+F:\MyNewDll\PSPEditor.pdb
+F:\Change2Dll\PSPEditor\PSPEditor\obj\Debug\PSPEditor.csprojResolveAssemblyReference.cache
+F:\Change2Dll\PSPEditor\PSPEditor\obj\Debug\PSPEditor.dll
+F:\Change2Dll\PSPEditor\PSPEditor\obj\Debug\PSPEditor.pdb
+F:\Change2Dll\PSPEditor\PSPEditor\obj\Debug\PSPEditor.csproj.CoreCompileInputs.cache
