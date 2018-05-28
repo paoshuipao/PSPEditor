@@ -50,13 +50,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttributeInspector\MyAddButtonInspector.cs" />
     <Compile Include="AttributeInspector\MyHeadInspector.cs" />
-    <Compile Include="AttributeInspector\MyHideInspector.cs" />
-    <Compile Include="AttributeInspector\MyUseColorInspector.cs" />
     <Compile Include="EditorUtil\AbstractClass\AbstractComponent.cs" />
     <Compile Include="EditorUtil\AbstractClass\AbstractKuang.cs" />
-    <Compile Include="Editor\OtherDll\LearnBmob.cs" />
     <Compile Include="Editor\OtherDll\LearnZIP.cs" />
     <Compile Include="Editor\UnityTools\AutoBuilderWindow.cs" />
     <Compile Include="Editor\UnityTools\Create3DObject.cs" />

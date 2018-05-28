@@ -772,6 +772,13 @@ namespace PSPEditor.EditorUtil
         {
             MyCreate.FenGeXian(((isKongGe ? "   " : "") + "[ " + biaoTi + " ]").AddYellowBold());
         }
+
+
+        public void BiaoTi_R(string biaoTi, bool isKongGe = false)
+        {
+            MyCreate.FenGeXian(((isKongGe ? "   " : "") + "[ " + biaoTi + " ]").AddRedBold());
+        }
+
         public void BiaoTi_R(string biaoTi, ref bool isShow, Action action)
         {
             bool tmp = isShow;
@@ -972,7 +979,6 @@ namespace PSPEditor.EditorUtil
 
 
         #endregion
-
 
 
         public void TextButton(string text, string buttonText, Action onClick, int changJianGe = 0)
@@ -1215,6 +1221,15 @@ namespace PSPEditor.EditorUtil
             Method(str1.AddYellow(), tmp, des.AddHui(), re, changJianGe);
         }
 
+        public void Method_YW(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddYellow(), tmp, des.AddWhite(), re, changJianGe);
+        }
         public void Method_YG(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
         {
             string tmp = "";
@@ -1236,6 +1251,17 @@ namespace PSPEditor.EditorUtil
             Method(str1.AddYellow(), tmp, des.AddLightBlue(), re, ref isShow, action, changJianGe, MyEnumColor.Yellow);
         }
 
+        public void Method_YW(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddYellow(), tmp, des.AddWhite(), re, ref isShow, action, changJianGe, MyEnumColor.Yellow);
+        }
+
+
         public void Method_BL(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
         {
             string tmp = "";
@@ -1256,7 +1282,25 @@ namespace PSPEditor.EditorUtil
             Method(str1.AddBlue(), tmp, des.AddLightBlue(), re, ref isShow, action, changJianGe, MyEnumColor.Blue);
         }
 
+        public void Method_RG(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddRed(), tmp, des.AddGreen(), re, changJianGe);
+        }
 
+        public void Method_RG(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddRed(), tmp, des.AddGreen(), re, ref isShow, action, changJianGe, MyEnumColor.Red);
+        }
         #endregion
 
 
