@@ -407,6 +407,15 @@ namespace PSPEditor.EditorUtil
             AddSpace(15);
             Window("【" + " Static".AddBold() + " Properties 】", action);
         }
+
+
+        public static void GouZaoWindow(Action action)
+        {
+            AddSpace(15);
+            Window("【 构造函数 】", action);
+        }
+
+
         public static void PropertiesWindow(Action action)
         {
             AddSpace(15);
