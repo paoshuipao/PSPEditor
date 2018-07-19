@@ -154,6 +154,24 @@ namespace UnityEditor
             Texture2D texture = LoadRes.DownImage(path);
             if (null != texture)
             {
+                Rect rect = GUILayoutUtility.GetRect(0f, 0f);
+                rect.width = texture.width;
+                rect.height = texture.height;
+                GUILayout.Space(rect.height);
+                GUI.DrawTexture(rect, texture);
+            }
+            else
+            {
+
+                MyCreate.Image(Texture2D.whiteTexture);
+            }
+        }
+
+        protected static void ShowButtomImage(string path)
+        {
+            Texture2D texture = LoadRes.DownImage(path);
+            if (null != texture)
+            {
                 MyCreate.Image(texture);
             }
             else

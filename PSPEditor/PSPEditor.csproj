@@ -53,9 +53,8 @@
     <Compile Include="AttributeInspector\MyHeadInspector.cs" />
     <Compile Include="EditorUtil\AbstractClass\AbstractComponent.cs" />
     <Compile Include="EditorUtil\AbstractClass\AbstractKuang.cs" />
-    <Compile Include="Editor\OtherDll\LearnZIP.cs" />
-    <Compile Include="Editor\UnityTools\AutoBuilderWindow.cs" />
-    <Compile Include="Editor\UnityTools\Create3DObject.cs" />
+    <Compile Include="Z_Obsolete\UnityTools\AutoBuilderWindow.cs" />
+    <Compile Include="Z_Obsolete\UnityTools\Create3DObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\LoadRes.cs" />
     <Compile Include="Tools\MyClick.cs" />

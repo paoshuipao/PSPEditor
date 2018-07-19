@@ -12,11 +12,18 @@ namespace PSPEditor.EditorUtil
             JianTuoText(str1, 0, ref isShow, color, showAction, null);
         }
 
-        public static void TextText(string str1, string str2, int jianGe)
+        public static void TextText(string str1, string str2, int jianGe,bool isKongGe=true)
         {
             MyCreate.Heng(() =>
             {
-                MyCreate.Text("   " + str1, jianGe);
+                if (isKongGe)
+                {
+                    MyCreate.Text("   " + str1, jianGe);
+                }
+                else
+                {
+                    MyCreate.Text(str1, jianGe);
+                }
                 MyCreate.Text(str2);
             });
         }
@@ -30,22 +37,29 @@ namespace PSPEditor.EditorUtil
         }
 
 
-        public static void TextText2(string str1, string str2, int jianGe, ref bool isShow, Action showAction)
+        public static void TextText2(string str1, string str2, int jianGe, ref bool isShow, Action showAction,MyEnumColor color =MyEnumColor.LightBlue)
         {
             JianTuoText2(str1, jianGe, ref isShow, showAction, () =>
             {
                 MyCreate.Text(str2);
-            });
+            },false, color);
         }
 
         #endregion
 
 
-        public static void Text3(string str1, string str2, string str3, int jianGe)
+        public static void Text3(string str1, string str2, string str3, int jianGe,bool isKongGe=true)
         {
             MyCreate.Heng(() =>
             {
-                MyCreate.Text("   " + str1, jianGe);
+                if (isKongGe)
+                {
+                    MyCreate.Text("   " + str1, jianGe);
+                }
+                else
+                {
+                    MyCreate.Text(str1, jianGe);
+                }
                 MyCreate.Text(str2);
                 MyCreate.AddSpace();
                 MyCreate.Text(str3);
@@ -401,7 +415,7 @@ namespace PSPEditor.EditorUtil
             bool tmp = value;
             MyCreate.Heng(() =>
             {
-                MyCreate.Text(str1, jianGe);
+                MyCreate.Text("   " + str1, jianGe);
                 tmp = MyCreate.InputBool(tmp);
             });
             return tmp;
@@ -595,10 +609,10 @@ namespace PSPEditor.EditorUtil
         }
 
         private static void JianTuoText2(string text, int width,
-            ref bool isShow, Action showAction, Action action, bool isNeedSpace = true)
+            ref bool isShow, Action showAction, Action action, bool isNeedSpace = true,MyEnumColor color =MyEnumColor.LightBlue)
         {
             bool tmp = isShow;
-            string des = isShow ? "▼".AddHuiSize(10) : "▶".AddHuiSize(10);
+            string des = isShow ? "▼".AddColorAndSize(color,10,false) : "▶".AddColorAndSize(color, 10, false);
             MyCreate.Heng(() =>
             {
                 MyCreate.ButtonLabel(text, width, () =>

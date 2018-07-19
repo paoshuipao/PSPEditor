@@ -52,6 +52,7 @@ namespace PSPEditor.EditorUtil
             return TextEnum(textName.AddBlue(), value, changJianGe);
         }
 
+
         public Enum TextEnum_B(Enum value, int changJianGe = 0)
         {
             return TextEnum("[ " + value + " ]", value, changJianGe);
@@ -82,6 +83,40 @@ namespace PSPEditor.EditorUtil
             return TextEnum2(textStr.AddBlue(), value, ref isShow, showAction, changJianGe);
         }
 
+
+
+        public Enum TextEnum_Y(string textName, Enum value, int changJianGe = 0)
+        {
+            return TextEnum(textName.AddYellow(), value, changJianGe);
+        }
+
+        public int TextEnum_Y(string textName, int value, string[] displayedOptions, int changJianGe = 0)
+        {
+            return TextEnum(textName.AddYellow(), value, displayedOptions, changJianGe);
+        }
+
+        public Enum TextEnum_Y(string textStr, Enum value, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextEnum(textStr.AddYellow(), value, ref isShow, showAction, changJianGe, MyEnumColor.Yellow);
+        }
+
+        public int TextEnum_Y(string textStr, int value, string[] displayedOptions, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextEnum(textStr.AddYellow(), value, displayedOptions, ref isShow, showAction, changJianGe, MyEnumColor.Yellow); ;
+        }
+
+
+        public int TextEnum2_Y(string textStr, int value, string[] displayedOptions, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextEnum2(textStr.AddYellow(), value, displayedOptions, ref isShow, showAction, changJianGe); ;
+        }
+
+        public Enum TextEnum2_Y(string textStr, Enum value, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextEnum2(textStr.AddYellow(), value, ref isShow, showAction, changJianGe);
+        }
+
+
         #endregion
 
 
@@ -95,6 +130,10 @@ namespace PSPEditor.EditorUtil
             return TextVector3(textName.AddBlue(), value, changJianGe);
         }
 
+        public Vector3 TextVector3_Y(string textName, Vector3 value, int changJianGe = 0)
+        {
+            return TextVector3(textName.AddYellow(), value, changJianGe);
+        }
 
         #endregion
 
@@ -126,6 +165,17 @@ namespace PSPEditor.EditorUtil
         {
             return TextString(textName.AddBlue(), value, ref isShow, showAction, MyEnumColor.Blue, changJianGe); ;
         }
+
+
+        public string TextString_Y(string textName, string value, int changJianGe = 0)
+        {
+            return TextString(textName.AddYellow(), value, changJianGe);
+        }
+        public string TextString_Y(string textName, string value, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextString(textName.AddYellow(), value, ref isShow, showAction, MyEnumColor.Yellow, changJianGe); ;
+        }
+
 
         public string TextString2_B(string textStr, string value, ref bool isShow, Action showAction, int changJianGe = 0)
         {
@@ -173,6 +223,26 @@ namespace PSPEditor.EditorUtil
         }
 
 
+
+
+        public float TextFloat_Y(string textName, float value, float minValue, float maxValue, int changJianGe = 0)
+        {
+            return TextFloat(textName.AddYellow(), value, minValue, maxValue, changJianGe); 
+        }
+
+
+        public float TextFloat_Y(string textStr, float value, float minValue, float maxValue, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextFloat(textStr.AddYellow(), value, minValue, maxValue, ref isShow, showAction, MyEnumColor.Yellow, changJianGe);
+        }
+
+
+        public float TextFloat2_Y(string textStr, float value, float minValue, float maxValue, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextFloat2(textStr.AddYellow(), value, minValue, maxValue, ref isShow, showAction, changJianGe);
+        }
+
+
         #endregion
 
 
@@ -206,6 +276,23 @@ namespace PSPEditor.EditorUtil
         public int TextInt2_B(string textStr, int value, int minValue, int maxValue, ref bool isShow, Action showAction, int changJianGe = 0)
         {
             return TextInt2(textStr.AddBlue(), value, minValue, maxValue, ref isShow, showAction, changJianGe, MyEnumColor.Blue); ;
+        }
+
+
+
+        public int TextInt_Y(string textName, int value, int minValue, int maxValue, int changJianGe = 0)
+        {
+            return TextInt(textName.AddYellow(), value, minValue, maxValue, changJianGe); ;
+        }
+
+        public int TextInt_Y(string textStr, int value, int minValue, int maxValue, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextInt(textStr.AddYellow(), value, minValue, maxValue, ref isShow, showAction, changJianGe, MyEnumColor.Yellow);
+        }
+
+        public int TextInt2_Y(string textStr, int value, int minValue, int maxValue, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextInt2(textStr.AddYellow(), value, minValue, maxValue, ref isShow, showAction, changJianGe, MyEnumColor.Yellow); ;
         }
 
         #endregion
@@ -267,6 +354,37 @@ namespace PSPEditor.EditorUtil
             return TextBool2(trueStr.AddBlue(), falseStr.AddBlue(), value, ref isShow, showAction, changJianGe);
         }
 
+
+
+        public bool TextBool_Y(string textStr, bool value, int changJianGe = 0)
+        {
+            return TextBool(textStr.AddYellow(), value, changJianGe); ;
+        }
+
+        public bool TextBool_Y(string textStr, bool value, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextBool(textStr.AddYellow(), value, ref isShow, showAction, MyEnumColor.Yellow, changJianGe);
+        }
+
+        public bool TextBool_Y(string trueStr, string falseStr, bool value, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextBool(trueStr.AddYellow(), falseStr.AddYellow(), value, ref isShow, showAction, changJianGe, MyEnumColor.Yellow);
+        }
+
+
+        public bool TextBool2_Y(string textStr, bool value, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextBool2(textStr.AddYellow(), value, ref isShow, showAction, changJianGe);
+        }
+
+
+        public bool TextBool2_Y(string trueStr, string falseStr, bool value, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            return TextBool2(trueStr.AddYellow(), falseStr.AddYellow(), value, ref isShow, showAction, changJianGe);
+        }
+
+
+
         #endregion
 
 
@@ -306,7 +424,6 @@ namespace PSPEditor.EditorUtil
             sb.Append("</color>");
             MyCreate.Text(sb.ToString());
         }
-
 
 
         public void Text_B(string str1)
@@ -370,6 +487,19 @@ namespace PSPEditor.EditorUtil
             sb.Append("</color>");
             MyCreate.Text(sb.ToString());
         }
+
+        public void Text_W(params string[] str)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("   <color=#ffffffff>");
+            foreach (string s in str)
+            {
+                sb.Append(s);
+            }
+            sb.Append("</color>");
+            MyCreate.Text(sb.ToString());
+        }
+
 
         public void Text_O(string str1)
         {
@@ -442,9 +572,9 @@ namespace PSPEditor.EditorUtil
         #endregion
 
 
-        public void TextText(string str1, string str2, int changJianGe = 0)
+        public void TextText(string str1, string str2, int changJianGe = 0,bool isKongGe=true)
         {
-            MyZuHe.TextText(str1, str2, m_JianGe + changJianGe);
+            MyZuHe.TextText(str1, str2, m_JianGe + changJianGe, isKongGe);
         }
         #region TextText 重载
         public void TextText_BL(string str1, string str2, int changJianGe = 0)
@@ -468,9 +598,84 @@ namespace PSPEditor.EditorUtil
             TextText(str1.AddHui(), str2.AddLightBlue(), ref isShow, showAction, changJianGe, MyEnumColor.Hui);
         }
 
+
+
+        public void TextText_HW(string str1, string str2, int changJianGe = 0)
+        {
+            TextText(str1.AddHui(), str2.AddWhite(), changJianGe);
+        }
+
+        public void TextText_HW(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            TextText(str1.AddHui(), str2.AddWhite(), ref isShow, showAction, changJianGe, MyEnumColor.Hui);
+        }
+
+
+        public void TextText_YB(string str1, string str2, int changJianGe = 0)
+        {
+            TextText(str1.AddYellow(), str2.AddBlue(), changJianGe);
+        }
+
+        public void TextText_YB(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            TextText(str1.AddYellow(), str2.AddBlue(), ref isShow, showAction, changJianGe, MyEnumColor.Yellow);
+        }
+
+
+        public void TextText_LH(string str1, string str2, int changJianGe = 0)
+        {
+            TextText(str1.AddLightBlue(), str2.AddHui(), changJianGe);
+        }
+
+        public void TextText_LH(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            TextText(str1.AddLightBlue(), str2.AddHui(), ref isShow, showAction, changJianGe);
+        }
+
+        public void TextText_HLG(string str1, string str2, int changJianGe = 0)
+        {
+            TextText(str1.AddHui(), str2.AddLightGreen(), changJianGe);
+        }
+
+        public void TextText_HLG(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            TextText(str1.AddHui(), str2.AddLightGreen(), ref isShow, showAction, changJianGe,MyEnumColor.LightGreen);
+        }
+
+
+        public void TextText_OG(string str1, string str2, int changJianGe = 0)
+        {
+            TextText(str1.AddOrange(), str2.AddGreen(), changJianGe);
+        }
+
+        public void TextText_OG(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            TextText(str1.AddOrange(), str2.AddGreen(), ref isShow, showAction, changJianGe, MyEnumColor.Orange);
+        }
+
         public void TextText_BH(string str1, string str2, int changJianGe = 0)
         {
             TextText(str1.AddBlue(), str2.AddHui(), changJianGe);
+        }
+
+        public void TextText_LY(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            TextText(str1.AddLightBlue(), str2.AddYellow(), ref isShow, showAction, changJianGe, MyEnumColor.LightBlue);
+        }
+
+        public void TextText_LY(string str1, string str2, int changJianGe = 0)
+        {
+            TextText(str1.AddLightBlue(), str2.AddYellow(), changJianGe);
+        }
+
+        public void TextText_WB(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            TextText(str1.AddWhite(), str2.AddBlue(), ref isShow, showAction, changJianGe, MyEnumColor.White);
+        }
+
+        public void TextText_WB(string str1, string str2, int changJianGe = 0)
+        {
+            TextText(str1.AddWhite(), str2.AddBlue(), changJianGe);
         }
 
         public void TextText_LW(string str1, string str2, int changJianGe = 0)
@@ -645,22 +850,31 @@ namespace PSPEditor.EditorUtil
         }
 
 
+        public void TextText2_OY(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            MyZuHe.TextText2(str1.AddOrange(), str2.AddYellow(), changJianGe, ref isShow, showAction,MyEnumColor.Orange);
+        }
 
+
+        public void TextText2_BY(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
+        {
+            MyZuHe.TextText2(str1.AddBlue(), str2.AddYellow(), changJianGe, ref isShow, showAction, MyEnumColor.Blue);
+        }
 
 
         #endregion
 
 
 
-        public void Text3(string str1, string str2, string str3 = "", int changJianGe = 0)
+        public void Text3(string str1, string str2, string str3 = "", int changJianGe = 0,bool isKongGe=true)
         {
             if (!string.IsNullOrEmpty(str3))
             {
-                MyZuHe.Text3(str1, str2, str3.AddHui(), m_JianGe + changJianGe);
+                MyZuHe.Text3(str1, str2, str3.AddHui(), m_JianGe + changJianGe, isKongGe);
             }
             else
             {
-                TextText(str1, str2, changJianGe);
+                TextText(str1, str2, changJianGe, isKongGe);
             }
 
         }
@@ -673,7 +887,6 @@ namespace PSPEditor.EditorUtil
         {
             Text3(str1.AddOrange(), str2.AddYellow(), str3, changJianGe);
         }
-
 
 
         public void Text3(string str1, string str2, ref bool isShow, Action showAction, string str3 = "", int changJianGe = 0, MyEnumColor color = MyEnumColor.LightBlue)
@@ -716,6 +929,10 @@ namespace PSPEditor.EditorUtil
 
         /*----------------------------------------------------------------------------------*/
 
+        public void TextSelectText_L(string str1, string str2, int changJianGe = 0)
+        {
+            TextSelectText(str1.AddLightBlue(), str2, changJianGe);
+        }
 
         public void TextSelectText_Y(string str1, string str2, int changJianGe = 0)
         {
@@ -726,6 +943,7 @@ namespace PSPEditor.EditorUtil
         {
             TextSelectText(str1.AddBlue(), str2, changJianGe);
         }
+
 
         public void TextSelectText_B(string str1, string str2, ref bool isShow, Action showAction, int changJianGe = 0)
         {
@@ -862,9 +1080,20 @@ namespace PSPEditor.EditorUtil
             isShow = tmp;
         }
 
+        public Enum BiaoTi_B(Enum value,string biaoTi, int changJianGe = 0)
+        {
+            return MyZuHe.TextEnum(biaoTi.AddBlueBold()+"  [ "+value+" ]", value, m_JianGe + changJianGe, false);
+        }
+
+        public Enum BiaoTi_B(string textName, Enum value, int changJianGe = 0)
+        {
+            return MyZuHe.TextEnum(textName.AddBlueBold(), value, m_JianGe + changJianGe, false);
+        }
+
+
         public Enum BiaoTi_O(Enum value, int changJianGe = 0)
         {
-            return BiaoTi_O("[ " + value + " ]", value, changJianGe); ;
+            return BiaoTi_O("[ " + value+ " ]", value, changJianGe); ;
         }
 
         public Enum BiaoTi_O(Enum value, int index, string[] ops, int changJianGe = 0)
@@ -1097,13 +1326,15 @@ namespace PSPEditor.EditorUtil
         #endregion
 
 
-        public void Method(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+
+        public void Method(string str1, string caiShu, string des, string re = "", int changJianGe = 0,bool isKongGe=true)
         {
             if (!string.IsNullOrEmpty(re))
             {
                 re = re.AddSize(11).ToString();
             }
-            Text3(str1 + " " + caiShu.AddSize(11), des, re, changJianGe);
+            Text3(str1 + " " + caiShu.AddSize(11), des, re, changJianGe,isKongGe);
+
             MyCreate.AddSpace(3);
         }
         #region Method 重载
@@ -1138,6 +1369,67 @@ namespace PSPEditor.EditorUtil
             Method(str1.AddBlue(), tmp, des.AddYellow(), re, ref isShow, action, changJianGe, MyEnumColor.Blue);
         }
 
+        public void Method_YB(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddYellow(), tmp, des.AddBlue(), re, changJianGe);
+        }
+
+        public void Method_YB(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddYellow(), tmp, des.AddBlue(), re, ref isShow, action, changJianGe, MyEnumColor.Yellow);
+        }
+
+
+        public void Method_LY(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddLightBlue(), tmp, des.AddYellow(), re, changJianGe);
+        }
+
+        public void Method_LY(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddLightBlue(), tmp, des.AddYellow(), re, ref isShow, action, changJianGe, MyEnumColor.LightBlue);
+        }
+
+        public void Method_BR(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddBlue(), tmp, des.AddRed(), re, changJianGe);
+        }
+
+        public void Method_BR(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddBlue(), tmp, des.AddRed(), re, ref isShow, action, changJianGe, MyEnumColor.Blue);
+        }
+
 
         public void Method_OY(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
         {
@@ -1167,6 +1459,17 @@ namespace PSPEditor.EditorUtil
                 tmp = ("(" + caiShu + ")").AddHui();
             }
             Method(str1.AddOrange(), tmp, des.AddWhite(), re.AddLightBlue(), changJianGe);
+        }
+
+
+        public void Method_BW(bool isKongGe,string str1, string caiShu, string des, string re, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddBlue(), tmp, des.AddWhite(), re.AddLightBlue(), changJianGe, isKongGe);
         }
 
 
@@ -1262,14 +1565,14 @@ namespace PSPEditor.EditorUtil
         }
 
 
-        public void Method_BL(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        public void Method_BL(string str1, string caiShu, string des, string re = "", int changJianGe = 0,bool isKongGe=true)
         {
             string tmp = "";
             if (!string.IsNullOrEmpty(caiShu))
             {
                 tmp = ("(" + caiShu + ")").AddHui();
             }
-            Method(str1.AddBlue(), tmp, des.AddLightBlue(), re, changJianGe);
+            Method(str1.AddBlue(), tmp, des.AddLightBlue(), re, changJianGe, isKongGe);
         }
 
         public void Method_BL(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
@@ -1301,6 +1604,91 @@ namespace PSPEditor.EditorUtil
             }
             Method(str1.AddRed(), tmp, des.AddGreen(), re, ref isShow, action, changJianGe, MyEnumColor.Red);
         }
+
+
+        public void Method_WL(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddWhite(), tmp, des.AddLightBlue(), re, changJianGe);
+        }
+
+        public void Method_WL(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddWhite(), tmp, des.AddLightBlue(), re, ref isShow, action, changJianGe, MyEnumColor.White);
+        }
+
+        public void Method_WB(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddWhite(), tmp, des.AddBlue(), re, changJianGe);
+        }
+
+        public void Method_WB(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddWhite(), tmp, des.AddBlue(), re, ref isShow, action, changJianGe, MyEnumColor.White);
+        }
+
+
+        public void Method_LB(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddLightBlue(), tmp, des.AddBlue(), re, changJianGe);
+        }
+
+        public void Method_LB(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddLightBlue(), tmp, des.AddBlue(), re, ref isShow, action, changJianGe, MyEnumColor.LightBlue);
+        }
+
+        public void Method_LW(string str1, string caiShu, string des, string re = "", int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddLightBlue(), tmp, des.AddWhite(), re, changJianGe);
+        }
+
+        public void Method_LW(string str1, string caiShu, string des, string re, ref bool isShow, Action action, int changJianGe = 0)
+        {
+            string tmp = "";
+            if (!string.IsNullOrEmpty(caiShu))
+            {
+                tmp = ("(" + caiShu + ")").AddHui();
+            }
+            Method(str1.AddLightBlue(), tmp, des.AddWhite(), re, ref isShow, action, changJianGe, MyEnumColor.LightBlue);
+        }
+
+
+
         #endregion
 
 
@@ -1421,7 +1809,6 @@ namespace PSPEditor.EditorUtil
 
 
 
-
         public void TextTextOpen_BY(string str1,string str2,Action action,int changJianGe = 0,string btnName= "详情打开")
         {
             MyCreate.Heng(() =>
@@ -1436,6 +1823,119 @@ namespace PSPEditor.EditorUtil
             });
         }
 
+
+
+
+        public void Text4(string str1, string str2, string str3, string str4, int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1 + "(" + str2 + ")", m_JianGe + changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3 + "(" + str4 + ")");
+                }
+            });
+
+        }
+
+
+        public void Text4_BW(string str1,string str2,string str3,string str4,int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1.AddBlue()+"("+str2.AddWhite()+")", m_JianGe+ changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3.AddBlue() + "(" + str4.AddWhite() + ")");
+                }
+               
+            });
+
+        }
+
+
+        public void Text4_B(string str1, string str2, string str3, string str4, int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1.AddBlue() + "(" + str2 + ")", m_JianGe + changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3.AddBlue() + "(" + str4 + ")");
+                }
+
+            });
+
+        }
+
+
+        public void Text4_L(string str1, string str2, string str3, string str4, int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1.AddLightBlue() + "(" + str2 + ")", m_JianGe + changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3.AddLightBlue() + "(" + str4 + ")");
+                }
+
+            });
+
+        }
+        public void Text4_HW(string str1, string str2, string str3, string str4, int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1.AddHui() + "(" + str2.AddWhite() + ")", m_JianGe + changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3.AddHui() + "(" + str4.AddWhite() + ")");
+                }
+
+            });
+
+
+
+        }
+
+
+        public void Text4_BL(string str1, string str2, string str3, string str4, int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1.AddBlue() + "(" + str2.AddLightBlue() + ")", m_JianGe + changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3.AddBlue() + "(" + str4.AddLightBlue() + ")");
+                }
+            });
+        }
+
+        public void Text4_YB(string str1, string str2, string str3, string str4, int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1.AddYellow() + "(" + str2.AddBlue() + ")", m_JianGe + changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3.AddYellow() + "(" + str4.AddBlue() + ")");
+                }
+            });
+        }
+
+
+        public void Text4_YW(string str1, string str2, string str3, string str4, int changJianGe = 0)
+        {
+            MyCreate.Heng(() =>
+            {
+                MyCreate.Text(str1.AddYellow() + "(" + str2.AddWhite() + ")", m_JianGe + changJianGe);
+                if (!string.IsNullOrEmpty(str3))
+                {
+                    MyCreate.Text(str3.AddYellow() + "(" + str4.AddWhite() + ")");
+                }
+            });
+        }
     }
 
 

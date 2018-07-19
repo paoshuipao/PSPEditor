@@ -438,7 +438,11 @@ namespace PSPEditor.EditorUtil
             Window("【" + " Static".AddBold() + " Events 】", action);
         }
 
-
+        public static void EventsWindow(Action action)
+        {
+            AddSpace(15);
+            Window("【 Events 】", action);
+        }
         public static void GetSetWindow(Action action)
         {
             AddSpace(15);
